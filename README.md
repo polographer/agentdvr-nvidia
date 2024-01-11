@@ -13,7 +13,7 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install
 
 the easiest way to get started is to use docker compose.  The docker-compose.yml file in this repo will create a container with the following:
 
-`
+```
 version: '3.5'
 services:
     agent-dvr:
@@ -38,7 +38,7 @@ services:
             devices:
               - driver: "nvidia"
                 count: 1`
-`
+```
 
 
 # docker registry
