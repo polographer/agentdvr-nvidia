@@ -3,6 +3,8 @@ Dockerfile and configuration for creating a container for AgentDVR with nvidia s
 
 # pre-requisites
 
+Install these 2 on your host machine
+
 1. docker ce
 https://docs.docker.com/engine/install/
 
@@ -11,7 +13,7 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install
 
 # docker compose 
 
-the easiest way to get started is to use docker compose.  The docker-compose.yml file in this repo will create a container with the following:
+after installing docker the easiest way to get started is to use docker compose.  Create a docker-compose.yml with this content:
 
 ```
 version: '3.5'
@@ -39,7 +41,7 @@ services:
               - driver: "nvidia"
                 count: 1`
 ```
-
+update the volumes to your computer's media, config and commands folders.  Then run `docker-compose up -d` to start the container.
 
 # docker registry
 https://hub.docker.com/repository/docker/polographer/agentdvr-nvidia/tags?page=1&ordering=last_updated
