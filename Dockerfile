@@ -1,9 +1,7 @@
-# Agent DVR NVidia
-
-# Use NVidia maintained docker image
-# FROM nvidia/cuda:11.1-runtime-ubuntu18.04 
+# Agent DVR NVidia # Use NVidia maintained docker image
 FROM nvidia/cuda:11.2.2-runtime-ubuntu20.04
-
+LABEL org.opencontainers.image.authors="me@poloornelas.mx"
+LABEL description="A docker image for Agent DVR with Nvidia support"
 #Define download location variables
 #ARG FILE_LOCATION="https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_9_6_0.zip"
 ENV FILE_LOCATION_SET=${FILE_LOCATION:+true}
